@@ -6,6 +6,6 @@ if($conn === false)
 }
 else
 {
-	echo "connected successfully";
+	//echo "connected successfully";
 }
 ?>

@@ -5,7 +5,7 @@ $q11 =  "CREATE TABLE IF NOT EXISTS example(name VARCHAR(20),pass VARCHAR(50))";
 
 
 if (mysqli_query($conn, $q11)) {
-    echo "Table created successfully";
+  //  echo "Table created successfully";
 } else {
     echo "Error creating table: " . mysqli_error($conn);
 }
@@ -18,6 +18,7 @@ if (($username !=NULL) AND ($password !=NULL))
 
 	$query ="INSERT INTO example (name,pass) VALUES ('$username','$password')";
 	$result =mysqli_query($conn,$query);
+	echo"<script>alert('you are successfully registered');</script>";
 }
 else
 {
