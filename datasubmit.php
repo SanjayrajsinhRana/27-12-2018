@@ -13,8 +13,17 @@ if (mysqli_query($conn, $q11)) {
 $username =$_POST['uname'];
 $password=$_POST['pass'];
 
-$query ="INSERT INTO example (name,pass) VALUES ('$username','$password')";
-$result =mysqli_query($conn,$query);
+if (($username !=NULL) AND ($password !=NULL))
+{
+
+	$query ="INSERT INTO example (name,pass) VALUES ('$username','$password')";
+	$result =mysqli_query($conn,$query);
+}
+else
+{
+	echo "username or password is empty";
+}
+
 
 
 
